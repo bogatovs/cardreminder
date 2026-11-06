@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вовремя — напоминания о платежах по банковским картам</title>
+<meta name="description" content="Вовремя — умные напоминания о платежах по банковским картам: распознавание скриншотов, контроль льготного периода, локальное хранение данных.">
+<style>
+  :root{
+    --bg:#0b1030; --card:#141b45; --accent:#1E88E5; --accent2:#00C853;
+    --text:#eef1fb; --muted:#9aa3c7;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(160deg,var(--bg),#05070f);
+    color:var(--text); min-height:100vh; line-height:1.55; padding:0 20px 60px;
+  }
+  .wrap{max-width:760px; margin:0 auto;}
+  header{padding:56px 0 20px; text-align:center;}
+  .badge{display:inline-block; background:rgba(30,136,229,.14); color:#8fc3ff;
+    border:1px solid rgba(30,136,229,.35); border-radius:999px; padding:6px 14px;
+    font-size:13px; font-weight:600; letter-spacing:.02em; margin-bottom:18px;}
+  h1{font-size:clamp(26px,5vw,38px); font-weight:800; letter-spacing:-.01em;}
+  .sub{color:var(--muted); max-width:520px; margin:12px auto 0; font-size:17px;}
+  .herologo{font-size:44px; line-height:1;}
+  .cta{margin-top:26px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+  .btn{display:inline-block; padding:13px 22px; border-radius:12px; font-weight:700;
+    text-decoration:none; transition:.18s transform; }
+  .btn.primary{background:var(--accent); color:#fff;}
+  .btn.ghost{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.25);}
+  .btn:hover{transform:translateY(-2px);}
+  section{margin-top:40px; background:var(--card); border:1px solid rgba(255,255,255,.07);
+    border-radius:18px; padding:26px 26px 30px;}
+  h2{font-size:19px; margin-bottom:16px;}
+  .feat{display:flex; gap:14px; align-items:flex-start; margin:12px 0;}
+  .feat .ico{flex:0 0 24px; text-align:center;}
+  p.foot{text-align:center; color:var(--muted); font-size:13px; margin-top:34px;}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; background:#0b1030;
+    padding:2px 6px; border-radius:6px; font-size:.9em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="herologo">⏰</div>
+    <div class="badge">Напоминания о платежах по банковским картам</div>
+    <h1>Вовремя</h1>
+    <p class="sub">Не упустите платёж по карте и не выйдите из льготного периода. Распознаваем скриншоты банков, напомним заранее.</p>
+    <div class="cta">
+      <a class="btn primary" href="#" onclick="return false;">Скачать в RuStore</a>
+      <a class="btn ghost" href="#" onclick="return false;">Подробнее о Премиуме</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Возможности</h2>
+    <div class="feat"><span class="ico">📷</span><div>Распознавание скриншотов и фото банков — данные о карте добавляются автоматически.</div></div>
+    <div class="feat"><span class="ico">✍️</span><div>Ручное добавление карты, если скриншот распознать не удалось.</div></div>
+    <div class="feat"><span class="ico">🔔</span><div>Умные напоминания за 1–30 дней; при выходных переносим на пятницу.</div></div>
+    <div class="feat"><span class="ico">📊</span><div>Расчёт общего долга и использованного лимита по всем картам.</div></div>
+    <div class="feat"><span class="ico">🛡️</span><div>Только локальное хранение — данные никуда не отправляются.</div></div>
+  </section>
+
+  <section>
+    <h2>Премиум</h2>
+    <p style="color:var(--muted)">Безлимитное число карт, напоминания за 1–30 дней и экспорт аналитики. Подписка оформляется через RuStore и отключает рекламу в приложении.</p>
+  </section>
+
+  <section>
+    <h2>Контакты и разработчик</h2>
+    <p style="color:var(--muted); word-break:break-word;">Поддержка и вопросы: <span class="mono">runhelp@mail.ru</span></p>
+  </section>
+
+  <p class="foot">© <span id="year"></span> Приложение «Вовремя». Все права защищены.</p>
+</div>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
